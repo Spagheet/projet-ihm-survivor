@@ -1,5 +1,11 @@
-[gd_scene format=3 uid="uid://teyc46wdjd7q"]
+[gd_scene load_steps=3 format=3 uid="uid://teyc46wdjd7q"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_hwm2r"]
+[ext_resource type="PackedScene" uid="uid://b2ilsca5wr8ly" path="res://hud.tscn" id="2_hfwem"]
 
 [node name="Main" type="Node3D"]
+script = ExtResource("1_hwm2r")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
+[node name="Camera" type="Camera3D" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("2_hfwem")]
