@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy3vq75ii0r4q"]
+[gd_scene load_steps=5 format=3 uid="uid://cy3vq75ii0r4q"]
+
+[ext_resource type="Script" path="res://enemy_1.gd" id="1_kea8y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvppq"]
 albedo_color = Color(0.219608, 0.607843, 0.176471, 1)
@@ -8,6 +10,7 @@ albedo_color = Color(0.219608, 0.607843, 0.176471, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_i14nb"]
 
 [node name="Enemy_1" type="RigidBody3D"]
+script = ExtResource("1_kea8y")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_qvppq")
@@ -15,3 +18,5 @@ mesh = SubResource("BoxMesh_yh12x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_i14nb")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

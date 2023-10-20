@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://b2ilsca5wr8ly"]
+[gd_scene load_steps=2 format=3 uid="uid://b2ilsca5wr8ly"]
+
+[sub_resource type="Theme" id="Theme_phciu"]
+default_font_size = 30
 
 [node name="HUD" type="Node2D"]
 
@@ -22,3 +25,18 @@ offset_top = 15.0
 offset_right = 125.0
 offset_bottom = 41.0
 text = "100"
+
+[node name="StartPanel" type="Panel" parent="."]
+offset_left = 404.0
+offset_top = 68.0
+offset_right = 715.0
+offset_bottom = 167.0
+
+[node name="StartLabel" type="Label" parent="StartPanel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 27.0
+offset_right = 296.0
+offset_bottom = 72.0
+theme = SubResource("Theme_phciu")
+text = "Press Enter to start"
