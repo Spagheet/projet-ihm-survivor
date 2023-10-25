@@ -8,6 +8,7 @@ albedo_color = Color(0, 0.443137, 0, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_yh12x"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i14nb"]
+size = Vector3(0.929366, 3.21933, 1.36155)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvwi4"]
 albedo_color = Color(0, 0.541176, 0, 1)
@@ -49,7 +50,7 @@ mesh = SubResource("BoxMesh_yh12x")
 skeleton = NodePath("../..")
 
 [node name="Hitbox" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.250036, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.114565, 1.30647, 0)
 shape = SubResource("BoxShape3D_i14nb")
 
 [node name="Head" type="MeshInstance3D" parent="."]
