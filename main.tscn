@@ -1,26 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://teyc46wdjd7q"]
+[gd_scene load_steps=4 format=3 uid="uid://teyc46wdjd7q"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_hwm2r"]
 [ext_resource type="PackedScene" uid="uid://b2ilsca5wr8ly" path="res://hud.tscn" id="2_hfwem"]
-[ext_resource type="Texture2D" path="res://textures/map.png" id="3_j7ktw"]
-[ext_resource type="PackedScene" uid="uid://iue1iv5j5qoa" path="res://arbre.tscn" id="4_enrcc"]
-[ext_resource type="PackedScene" uid="uid://de4g6ufyhbgla" path="res://car.tscn" id="5_xn7by"]
-
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_mkmkx"]
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_ma1aj"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2aqtq"]
-albedo_color = Color(0.337255, 0.447059, 0.0588235, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_ov6r7"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riv4p"]
-albedo_texture = ExtResource("3_j7ktw")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_ojej5"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_uogfw"]
+[ext_resource type="PackedScene" uid="uid://w8h06em8bdg5" path="res://map.tscn" id="3_wh758"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_hwm2r")
@@ -28,55 +10,12 @@ script = ExtResource("1_hwm2r")
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.509872, -0.49046, -0.706739, -0.829152, 0.499086, 0.251833, 0.229209, 0.714397, -0.661136, 2010.84, 1196.88, 3612.52)
 light_color = Color(1, 0.752941, 0.160784, 1)
-light_energy = 5.093
+light_energy = 3.307
 
 [node name="HUD" parent="." instance=ExtResource("2_hfwem")]
 
-[node name="Map" type="StaticBody3D" parent="."]
-
-[node name="Floor" type="CollisionShape3D" parent="Map"]
-shape = SubResource("WorldBoundaryShape3D_mkmkx")
-
-[node name="NavRegion" type="NavigationRegion3D" parent="Map"]
-navigation_mesh = SubResource("NavigationMesh_ma1aj")
-
-[node name="Skin" type="MeshInstance3D" parent="Map/NavRegion"]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_2aqtq")
-mesh = SubResource("PlaneMesh_ov6r7")
-skeleton = NodePath("../..")
-
-[node name="Road" type="MeshInstance3D" parent="Map"]
-transform = Transform3D(-10, 0, 3.49691e-07, 0, 10, 0, -8.74228e-07, 0, -4, -10.0922, 0.00260252, 4.11281)
-material_override = SubResource("StandardMaterial3D_riv4p")
-mesh = SubResource("PlaneMesh_ojej5")
-
-[node name="WallHouse" type="MeshInstance3D" parent="Map/Road"]
-transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 0.05, -0.00118732, 0, -0.971218)
-mesh = SubResource("BoxMesh_uogfw")
-
-[node name="Wall" type="MeshInstance3D" parent="Map/Road"]
-transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 0.05, -0.00118732, 0, 0.995422)
-mesh = SubResource("BoxMesh_uogfw")
+[node name="Map" parent="." instance=ExtResource("3_wh758")]
 
 [node name="POV" type="Camera3D" parent="."]
 transform = Transform3D(-1, 8.74228e-08, 2.25001e-15, 1.51808e-08, 0.173648, 0.984808, 8.60946e-08, 0.984808, -0.173648, -10.1412, 5.1797, 2.91991)
 script = ExtResource("1_hwm2r")
-
-[node name="Arbre1" parent="." instance=ExtResource("4_enrcc")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.23831, -0.0107507, 7.05482)
-
-[node name="Arbre2" parent="." instance=ExtResource("4_enrcc")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.13, -0.0107507, 7.01303)
-
-[node name="Arbre3" parent="." instance=ExtResource("4_enrcc")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.3906, -0.0107507, 7.1116)
-
-[node name="Arbre4" parent="." instance=ExtResource("4_enrcc")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -14.4943, -0.0107507, 7.09348)
-
-[node name="StaticBody3D" parent="." instance=ExtResource("5_xn7by")]
-transform = Transform3D(-0.0215183, 0, 0.999769, -0.00277443, 0.999996, -5.97147e-05, -0.999765, -0.00277507, -0.0215182, -5.64835, -0.123179, 5.16353)
-
-[node name="StaticBody3D2" parent="." instance=ExtResource("5_xn7by")]
-transform = Transform3D(-0.00638783, 0, -0.99998, 0, 1, 0, 0.99998, 0, -0.00638783, -12.528, 4.76837e-07, 3.2787)

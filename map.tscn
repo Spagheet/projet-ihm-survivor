@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=3 uid="uid://w8h06em8bdg5"]
+
+[ext_resource type="Texture2D" path="res://textures/map.png" id="1_3clhw"]
+[ext_resource type="PackedScene" uid="uid://iue1iv5j5qoa" path="res://arbre.tscn" id="2_bbu2a"]
+[ext_resource type="PackedScene" uid="uid://de4g6ufyhbgla" path="res://car.tscn" id="3_l6d77"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_mkmkx"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ma1aj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2aqtq"]
+albedo_color = Color(0.337255, 0.447059, 0.0588235, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ov6r7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riv4p"]
+albedo_texture = ExtResource("1_3clhw")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ojej5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_uogfw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x51t5"]
+size = Vector3(1.99277, 0.101353, 0.0680671)
+
+[node name="Map" type="StaticBody3D"]
+
+[node name="Floor" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0611, 0, 3.90905)
+shape = SubResource("WorldBoundaryShape3D_mkmkx")
+
+[node name="NavRegion" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_ma1aj")
+
+[node name="Skin" type="MeshInstance3D" parent="NavRegion"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0.0699468, 0.166794, 0.0850363)
+visible = false
+material_override = SubResource("StandardMaterial3D_2aqtq")
+mesh = SubResource("PlaneMesh_ov6r7")
+skeleton = NodePath("../..")
+
+[node name="Road" type="MeshInstance3D" parent="."]
+transform = Transform3D(-10, 0, 3.49691e-07, 0, 10, 0, -8.74228e-07, 0, -4, -10.092, 0.001, 4.113)
+layers = 3
+material_override = SubResource("StandardMaterial3D_riv4p")
+mesh = SubResource("PlaneMesh_ojej5")
+
+[node name="Wall" type="StaticBody3D" parent="Road"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Wall" type="MeshInstance3D" parent="Road/Wall"]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 0.05, -0.00118732, 0, 0.995422)
+mesh = SubResource("BoxMesh_uogfw")
+skeleton = NodePath("../..")
+
+[node name="bot_limit" type="CollisionShape3D" parent="Road/Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 4.26326e-14, 0, 1, 0, 0, 1.00118)
+shape = SubResource("BoxShape3D_x51t5")
+
+[node name="WallHouse" type="StaticBody3D" parent="Road"]
+
+[node name="WallHouse" type="MeshInstance3D" parent="Road/WallHouse"]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 0.05, -0.00118744, 0, -0.971218)
+mesh = SubResource("BoxMesh_uogfw")
+skeleton = NodePath("../..")
+
+[node name="top_limit" type="CollisionShape3D" parent="Road/WallHouse"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76837e-07, 0, -0.9717)
+shape = SubResource("BoxShape3D_x51t5")
+
+[node name="Arbre1" parent="." instance=ExtResource("2_bbu2a")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.23831, -0.0107507, 7.05482)
+
+[node name="Arbre2" parent="." instance=ExtResource("2_bbu2a")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.13, -0.0107507, 7.01303)
+
+[node name="Arbre3" parent="." instance=ExtResource("2_bbu2a")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.3906, -0.0107507, 7.1116)
+
+[node name="Arbre4" parent="." instance=ExtResource("2_bbu2a")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -14.4943, -0.0107507, 7.09348)
+
+[node name="Voiture" parent="." instance=ExtResource("3_l6d77")]
+transform = Transform3D(-0.0215183, 0, 0.999769, -0.00277443, 0.999996, -5.97147e-05, -0.999765, -0.00277507, -0.0215182, -5.64835, -0.123179, 5.16353)
+
+[node name="Voiture2" parent="." instance=ExtResource("3_l6d77")]
+transform = Transform3D(-0.00638783, 0, -0.99998, 0, 1, 0, 0.99998, 0, -0.00638783, -12.528, 4.76837e-07, 3.2787)
