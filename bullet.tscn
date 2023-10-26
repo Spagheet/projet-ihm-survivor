@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ve3oms21au2s"]
+
+[ext_resource type="Texture2D" uid="uid://bnikruhsapagn" path="res://textures/bullet.png" id="1_tgfuf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wctye"]
+albedo_texture = ExtResource("1_tgfuf")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_05p2m"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6u0vc"]
+
+[node name="bullet" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.044125, -0.999026, 0, 0.999026, 0.044125, 0, 0, 0)
+
+[node name="bullet_texture" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_wctye")
+mesh = SubResource("CapsuleMesh_05p2m")
+skeleton = NodePath("../..")
+
+[node name="bullet_hitbox" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 9.31323e-10, 0, -9.31323e-10, 0.1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_6u0vc")
