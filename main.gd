@@ -46,16 +46,16 @@ func get_spawn_location():
 	match location_rng :
 		1:
 			#left spawn
-			return Vector3(-20,1,rng_offset)
+			return Vector3(-20,0,rng_offset)
 		2:
 			#right spawn
-			return Vector3(20,1,rng_offset)
+			return Vector3(20,0,rng_offset)
 		3:
 			#top spawn
-			return Vector3(rng_offset,1,-20)
+			return Vector3(rng_offset,0,-20)
 		4:
 			#bottom spawn
-			return Vector3(rng_offset,1,20)
+			return Vector3(rng_offset,0,20)
 
 func _on_spawn_timer_timeout():
 	spawn_enemy()

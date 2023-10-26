@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b6cbpt02t20xb" path="res://textures/body_player.png" id="1_44ass"]
 [ext_resource type="Texture2D" uid="uid://b81pgf7fouhy6" path="res://textures/arm_leg.png" id="2_2hmvv"]
 [ext_resource type="Texture2D" uid="uid://bf6gbikmn7ofd" path="res://textures/skin.png" id="3_m76bx"]
-[ext_resource type="Texture2D" uid="uid://gnqb6m0opolc" path="res://textures/head.png" id="4_2khc7"]
+[ext_resource type="Texture2D" uid="uid://gnqb6m0opolc" path="res://textures/Head.png" id="4_2khc7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ponnq"]
 
