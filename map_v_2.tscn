@@ -1,0 +1,491 @@
+[gd_scene load_steps=8 format=3 uid="uid://dyegv4cqm0pur"]
+
+[ext_resource type="Texture2D" uid="uid://c7x5tyryk7cyl" path="res://textures/mapV2.png" id="1_rt5ln"]
+[ext_resource type="PackedScene" uid="uid://de4g6ufyhbgla" path="res://car.tscn" id="2_4n0lg"]
+[ext_resource type="PackedScene" uid="uid://iue1iv5j5qoa" path="res://arbre.tscn" id="3_pw1xt"]
+[ext_resource type="PackedScene" uid="uid://dhif8eskrkryp" path="res://house.tscn" id="4_60oqd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rah6e"]
+albedo_texture = ExtResource("1_rt5ln")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uwir6"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_bx000"]
+
+[node name="map_V2" type="StaticBody3D"]
+
+[node name="map_V2_texture" type="MeshInstance3D" parent="."]
+transform = Transform3D(80, 0, 0, 0, 80, 0, 0, 0, 80, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_rah6e")
+mesh = SubResource("PlaneMesh_uwir6")
+
+[node name="Car" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, -0.645348, 0, -0.204016)
+
+[node name="Car2" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, -0.445832, 0, -0.204016)
+
+[node name="Car3" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, -0.159271, 0, -0.204016)
+
+[node name="Car4" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, 0.158138, 0, -0.204016)
+
+[node name="Car5" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, 0.186232, 0, -0.204016)
+
+[node name="Car6" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, 0.562111, 0, -0.204016)
+
+[node name="Car7" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, 0.618304, 0, -0.204016)
+
+[node name="Car8" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, 0.618304, 0, -0.370314)
+
+[node name="Car9" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, 0.357086, 0, -0.370314)
+
+[node name="Car10" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, 0.0153793, 0, -0.370314)
+
+[node name="Car11" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, -0.0446094, 0, -0.370314)
+
+[node name="Car12" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, -0.129656, 0, -0.370314)
+
+[node name="Car13" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, -0.587545, 0, -0.370314)
+
+[node name="Car14" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, -0.587545, 0, -0.538889)
+
+[node name="Car15" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, -0.446305, 0, -0.538889)
+
+[node name="Car16" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, -0.130416, 0, -0.538889)
+
+[node name="Car17" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, 0.21357, 0, -0.538889)
+
+[node name="Car18" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, 0.533256, 0, -0.538889)
+
+[node name="Car19" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, 0.533256, 0, -0.704427)
+
+[node name="Car20" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, 0.300135, 0, -0.704427)
+
+[node name="Car21" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, -0.303548, 0, -0.704427)
+
+[node name="Car22" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, -0.303548, 0, -0.871485)
+
+[node name="Car23" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, -0.529834, 0, -0.871485)
+
+[node name="Car24" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, -0.100801, 0, -0.871485)
+
+[node name="Car25" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, 0.386701, 0, -0.871485)
+
+[node name="Car26" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(-0.0125, 0, -1.09278e-09, 0, 0.0125, 0, 1.09278e-09, 0, -0.0125, 0.616785, 0, -0.871485)
+
+[node name="Car27" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.616785, 0, -0.810736)
+
+[node name="Car28" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.473268, 0, -0.810736)
+
+[node name="Car29" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.300136, 0, -0.810736)
+
+[node name="Car30" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.27204, 0, -0.810736)
+
+[node name="Car31" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.129656, 0, -0.810736)
+
+[node name="Car32" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.502497, 0, -0.810736)
+
+[node name="Car33" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.646774, 0, -0.810736)
+
+[node name="Car34" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.646015, 0, -0.64368)
+
+[node name="Car35" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.501738, 0, -0.64368)
+
+[node name="Car36" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.0723305, 0, -0.64368)
+
+[node name="Car37" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.590208, 0, -0.64368)
+
+[node name="Car38" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.590208, 0, -0.476622)
+
+[node name="Car39" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.387461, 0, -0.476622)
+
+[node name="Car40" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.100042, 0, -0.476622)
+
+[node name="Car41" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.55793, 0, -0.476622)
+
+[node name="Car42" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.55793, 0, -0.310325)
+
+[node name="Car43" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.387835, 0, -0.310325)
+
+[node name="Car44" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.0153794, 0, -0.310325)
+
+[node name="Car45" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.302414, 0, -0.310325)
+
+[node name="Car46" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.588689, 0, -0.310325)
+
+[node name="Car47" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.588689, 0, -0.143267)
+
+[node name="Car48" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.445171, 0, -0.143267)
+
+[node name="Car49" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.27128, 0, -0.143267)
+
+[node name="Car50" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.0742239, 0, -0.143267)
+
+[node name="Car51" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.389354, 0, -0.143267)
+
+[node name="Car52" parent="map_V2_texture" instance=ExtResource("2_4n0lg")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.6164, 0, -0.143267)
+
+[node name="tree" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.548476, -1.52588e-06, -0.257005)
+
+[node name="tree2" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.350155, -1.52588e-06, -0.258936)
+
+[node name="tree3" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.149904, -1.52588e-06, -0.258936)
+
+[node name="tree4" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.0497039, -1.52588e-06, -0.258936)
+
+[node name="tree5" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.249955, -1.52588e-06, -0.258936)
+
+[node name="tree6" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.450208, -1.52588e-06, -0.258936)
+
+[node name="tree7" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.649171, -1.52588e-06, -0.258936)
+
+[node name="tree8" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.551299, -1.52588e-06, -0.42313)
+
+[node name="tree9" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.350403, -1.52588e-06, -0.42313)
+
+[node name="tree10" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.150151, -1.52588e-06, -0.42313)
+
+[node name="tree11" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.0488125, -1.52588e-06, -0.42313)
+
+[node name="tree12" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.250353, -1.52588e-06, -0.42313)
+
+[node name="tree13" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.449316, -1.52588e-06, -0.42313)
+
+[node name="tree14" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.637978, -1.52588e-06, -0.42313)
+
+[node name="tree15" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.551051, -1.52588e-06, -0.591186)
+
+[node name="tree16" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.348868, -1.52588e-06, -0.591186)
+
+[node name="tree17" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.150548, -1.52588e-06, -0.591186)
+
+[node name="tree18" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.0503475, -1.52588e-06, -0.591186)
+
+[node name="tree19" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.251888, -1.52588e-06, -0.591186)
+
+[node name="tree20" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.448275, -1.52588e-06, -0.591186)
+
+[node name="tree21" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.649171, -1.52588e-06, -0.591186)
+
+[node name="tree22" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.549366, -1.52588e-06, -0.756024)
+
+[node name="tree23" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.351046, -1.52588e-06, -0.756024)
+
+[node name="tree24" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.150151, -1.52588e-06, -0.756024)
+
+[node name="tree25" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.0507442, -1.52588e-06, -0.756024)
+
+[node name="tree26" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.249709, -1.52588e-06, -0.756024)
+
+[node name="tree27" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.448673, -1.52588e-06, -0.756024)
+
+[node name="tree28" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.634758, -1.52588e-06, -0.756024)
+
+[node name="tree29" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.680666, -1.52588e-06, -0.878605)
+
+[node name="tree30" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.712679, -1.52588e-06, -0.878605)
+
+[node name="tree31" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.712679, -1.52588e-06, -0.135344)
+
+[node name="tree32" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.681173, -1.52588e-06, -0.135344)
+
+[node name="tree33" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.681173, -1.52588e-06, 0.101062)
+
+[node name="tree34" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.560133, -1.52588e-06, 0.118083)
+
+[node name="tree35" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.338856, -1.52588e-06, 0.222103)
+
+[node name="tree36" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.531764, -1.52588e-06, 0.180495)
+
+[node name="tree37" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.399376, -1.52588e-06, 0.11241)
+
+[node name="tree38" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.187556, -1.52588e-06, 0.214538)
+
+[node name="tree39" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.300056, -1.52588e-06, 0.139537)
+
+[node name="tree40" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.112556, -1.52588e-06, 0.114537)
+
+[node name="tree41" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.0750559, -1.52588e-06, 0.264538)
+
+[node name="tree42" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.287556, -1.52588e-06, 0.339538)
+
+[node name="tree43" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.136256, -1.52588e-06, 0.367906)
+
+[node name="tree44" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.47479, -1.52588e-06, 0.339538)
+
+[node name="tree45" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.062325, -1.52588e-06, 0.190129)
+
+[node name="tree46" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.117171, -1.52588e-06, 0.345211)
+
+[node name="tree47" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.0624974, -1.52588e-06, 0.460577)
+
+[node name="tree48" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.299998, -1.52588e-06, 0.448077)
+
+[node name="tree49" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.199761, -1.52588e-06, 0.308125)
+
+[node name="tree50" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.199293, -1.52588e-06, 0.236258)
+
+[node name="tree51" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.236792, -1.52588e-06, 0.423758)
+
+[node name="tree52" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.0992921, -1.52588e-06, 0.511258)
+
+[node name="tree53" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.309221, -1.52588e-06, 0.596364)
+
+[node name="tree54" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.371721, -1.52588e-06, 0.446364)
+
+[node name="tree55" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.284221, -1.52588e-06, 0.346364)
+
+[node name="tree56" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.371721, -1.52588e-06, 0.258864)
+
+[node name="tree57" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.484221, -1.52588e-06, 0.321364)
+
+[node name="tree58" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.565545, -1.52588e-06, 0.519945)
+
+[node name="tree59" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.465545, -1.52588e-06, 0.644945)
+
+[node name="tree60" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.565545, -1.52588e-06, 0.782445)
+
+[node name="tree61" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.290545, -1.52588e-06, 0.782445)
+
+[node name="tree62" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.190309, -1.52588e-06, 0.672753)
+
+[node name="tree63" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.452809, -1.52588e-06, 0.522753)
+
+[node name="tree64" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.652809, -1.52588e-06, 0.335252)
+
+[node name="tree65" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.540309, -1.52588e-06, 0.210253)
+
+[node name="tree66" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.327809, -1.52588e-06, 0.097752)
+
+[node name="tree67" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.652809, -1.52588e-06, 0.110252)
+
+[node name="tree68" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.0148024, -1.52588e-06, 0.615215)
+
+[node name="tree69" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.239803, -1.52588e-06, 0.602715)
+
+[node name="tree70" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.0419936, -1.52588e-06, 0.74645)
+
+[node name="tree71" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.445506, -1.52588e-06, 0.53395)
+
+[node name="tree72" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.658006, -1.52588e-06, 0.39645)
+
+[node name="tree73" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.633006, -1.52588e-06, 0.28395)
+
+[node name="tree74" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.158006, -1.52588e-06, 0.52145)
+
+[node name="tree75" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.133006, -1.52588e-06, 0.69645)
+
+[node name="tree76" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.0169936, -1.52588e-06, 0.37145)
+
+[node name="tree77" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.704494, -1.52588e-06, 0.0464503)
+
+[node name="tree78" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.502747, 0, 0.0528661)
+
+[node name="tree79" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.306058, 0, 0.0547575)
+
+[node name="tree80" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.0923463, 0, 0.0566486)
+
+[node name="tree81" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.120154, 0, 0.0566486)
+
+[node name="tree82" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.282654, 0, 0.0566486)
+
+[node name="tree83" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.470154, 0, 0.0566486)
+
+[node name="tree84" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.632654, 0, 0.0566486)
+
+[node name="tree85" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.820154, 0, 0.0566486)
+
+[node name="tree86" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.729463, 0, -0.0762412)
+
+[node name="tree87" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.733805, 0, -0.187234)
+
+[node name="tree88" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.739479, 0, -0.361229)
+
+[node name="tree89" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.74137, 0, -0.524468)
+
+[node name="tree90" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.732651, 0, -0.686554)
+
+[node name="tree91" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.566222, 0, -0.0718976)
+
+[node name="tree92" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.363859, 0, -0.0756801)
+
+[node name="tree93" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.188859, 0, -0.0711589)
+
+[node name="tree94" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.0167548, 0, -0.0711589)
+
+[node name="tree95" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.233245, 0, -0.0711589)
+
+[node name="tree96" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.433245, 0, -0.0711589)
+
+[node name="tree97" parent="map_V2_texture" instance=ExtResource("3_pw1xt")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.658245, 0, -0.0711589)
+
+[node name="house" parent="map_V2_texture" instance=ExtResource("4_60oqd")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.951, 0.005, -0.804)
+
+[node name="house2" parent="map_V2_texture" instance=ExtResource("4_60oqd")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.951, 0.005, -0.679)
+
+[node name="house3" parent="map_V2_texture" instance=ExtResource("4_60oqd")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.951, 0.005, -0.554)
+
+[node name="house4" parent="map_V2_texture" instance=ExtResource("4_60oqd")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.951, 0.005, -0.429)
+
+[node name="house5" parent="map_V2_texture" instance=ExtResource("4_60oqd")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.951, 0.005, -0.308)
+
+[node name="house6" parent="map_V2_texture" instance=ExtResource("4_60oqd")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.951, 0.005, -0.18)
+
+[node name="house7" parent="map_V2_texture" instance=ExtResource("4_60oqd")]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, -0.951, 0.005, -0.055)
+
+[node name="map_V2_hitbox" type="CollisionShape3D" parent="."]
+shape = SubResource("WorldBoundaryShape3D_bx000")

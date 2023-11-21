@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://c4388gruphqih" path="res://textures/bas_voiture.png" id="1_tqxuo"]
 [ext_resource type="Texture2D" uid="uid://dl31yn0k5t3m3" path="res://textures/hautvoiture.png" id="1_wbl6s"]
 [ext_resource type="Texture2D" uid="uid://bouxy3gnn6mq" path="res://textures/par_choc.png" id="2_x5s72"]
-[ext_resource type="Texture2D" path="res://textures/arriere.png" id="3_4pb3b"]
-[ext_resource type="Texture2D" path="res://textures/test2.png" id="3_7e7ts"]
+[ext_resource type="Texture2D" uid="uid://b22kic65qqjbl" path="res://textures/arriere.png" id="3_4pb3b"]
+[ext_resource type="Texture2D" uid="uid://b7u1sambauhva" path="res://textures/test2.png" id="3_7e7ts"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7ph4x"]
 size = Vector3(1.00784, 1.25675, 3.23131)
