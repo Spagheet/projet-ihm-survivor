@@ -1,14 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://teyc46wdjd7q"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_hwm2r"]
-[ext_resource type="PackedScene" uid="uid://cx38q051fbmkc" path="res://map.tscn" id="2_c48pf"]
 [ext_resource type="PackedScene" uid="uid://b2ilsca5wr8ly" path="res://hud.tscn" id="2_hfwem"]
-[ext_resource type="PackedScene" uid="uid://rghj70151w54" path="res://player.tscn" id="6_sjnbb"]
+[ext_resource type="PackedScene" uid="uid://bkpma077qyic4" path="res://player_with_cam.tscn" id="4_hrp2s"]
+[ext_resource type="PackedScene" uid="uid://dyegv4cqm0pur" path="res://map_v_2.tscn" id="4_uqus3"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_hwm2r")
-
-[node name="Map" parent="." instance=ExtResource("2_c48pf")]
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.509872, -0.49046, -0.706739, -0.829152, 0.499086, 0.251833, 0.229209, 0.714397, -0.661136, 2010.84, 1196.88, 3612.52)
@@ -17,10 +15,9 @@ light_energy = 3.307
 
 [node name="HUD" parent="." instance=ExtResource("2_hfwem")]
 
-[node name="POV" type="Camera3D" parent="."]
-transform = Transform3D(-1, 8.74227e-08, 2.00136e-14, 1.51808e-08, 0.173648, 0.984808, 8.60946e-08, 0.984808, -0.173648, -10.1412, 5.1797, 2.91991)
-
-[node name="Player" parent="." instance=ExtResource("6_sjnbb")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -4.42864, 0, 2.00072)
-
 [node name="SpawnTimer" type="Timer" parent="."]
+
+[node name="map_V2" parent="." instance=ExtResource("4_uqus3")]
+
+[node name="Player" parent="." instance=ExtResource("4_hrp2s")]
+transform = Transform3D(-2.18557e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.18557e-08, 0, 0, 0)
