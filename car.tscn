@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://de4g6ufyhbgla"]
+[gd_scene load_steps=18 format=3 uid="uid://cons1dgq66lam"]
 
 [ext_resource type="Texture2D" uid="uid://c4388gruphqih" path="res://textures/bas_voiture.png" id="1_tqxuo"]
 [ext_resource type="Texture2D" uid="uid://dl31yn0k5t3m3" path="res://textures/hautvoiture.png" id="1_wbl6s"]
@@ -37,7 +37,6 @@ albedo_texture = ExtResource("3_7e7ts")
 [sub_resource type="PrismMesh" id="PrismMesh_kdg7m"]
 
 [node name="StaticBody3D" type="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.374847, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.754437, 0.411501)

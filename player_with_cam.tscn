@@ -1,10 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://bkpma077qyic4"]
+[gd_scene load_steps=20 format=3 uid="uid://b00nxedb413f1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_sliq6"]
 [ext_resource type="Texture2D" uid="uid://b6cbpt02t20xb" path="res://textures/body_player.png" id="2_rlgk3"]
 [ext_resource type="Texture2D" uid="uid://b81pgf7fouhy6" path="res://textures/arm_leg.png" id="3_fat4v"]
 [ext_resource type="Texture2D" uid="uid://bf6gbikmn7ofd" path="res://textures/skin.png" id="4_0a06m"]
-[ext_resource type="Texture2D" uid="uid://gnqb6m0opolc" path="res://textures/head.png" id="5_shb0r"]
+[ext_resource type="Texture2D" uid="uid://gnqb6m0opolc" path="res://textures/Head.png" id="5_shb0r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o1k01"]
 albedo_texture = ExtResource("2_rlgk3")
@@ -40,7 +40,11 @@ albedo_texture = ExtResource("4_0a06m")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ponnq"]
 size = Vector3(0.803114, 2.9186, 0.898565)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ukhbf"]
+size = Vector3(1, 3, 1)
+
 [node name="Player" type="CharacterBody3D"]
+collision_layer = 9
 script = ExtResource("1_sliq6")
 
 [node name="Pivot" type="Node3D" parent="."]
@@ -112,3 +116,20 @@ transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 15.55, 
 [node name="Hitbox" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00861596, 1.59877, -0.00926971)
 shape = SubResource("BoxShape3D_ponnq")
+
+[node name="ShotCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="DamageInvuln" type="Timer" parent="."]
+one_shot = true
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 11
+collision_mask = 2
+
+[node name="Hitbox" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6822, 0)
+shape = SubResource("BoxShape3D_ukhbf")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

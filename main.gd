@@ -8,6 +8,9 @@ var enemy_array = []
 var rng = RandomNumberGenerator.new()
 
 @onready var start = $HUD/StartPanel
+@onready var end = $HUD/EndPanel
+@onready var health_display = $HUD/HealthPanel/Health
+@onready var score_display = $HUD/EndPanel/Score
 @onready var timer = $SpawnTimer
 @onready var player = $Player
 # Called when the node enters the scene tree for the first time.
@@ -16,7 +19,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
 	match state :
 		State.LOBBY :
 			# LOBBY STATE
@@ -24,15 +26,17 @@ func _process(delta):
 				state = State.RUNNING
 				start.visible = false
 				timer.start()
-		State.RUNNING : 
+		State.RUNNING :
 			# RUNNING STATE
-			
+
 			pass
-		State.END : 
+		State.END :
 			pass
 
 func _physics_process(delta):
-	get_tree().call_group("enemies", "update_target_location", player.global_transform.origin)
+	var target = player.global_transform.origin
+	target.y = 0.0
+	get_tree().call_group("enemies", "update_target_location", target)
 
 func spawn_enemy():
 	var enemy_instance = enemy_ressource.instantiate()
@@ -43,19 +47,33 @@ func spawn_enemy():
 func get_spawn_location():
 	var rng_offset = rng.randi_range(-20,20)
 	var location_rng = rng.randi_range(1, 4)
+	var height = -0.4
 	match location_rng :
 		1:
 			#left spawn
-			return Vector3(-20,0,rng_offset)
+			return Vector3(-20,height,rng_offset)
 		2:
 			#right spawn
-			return Vector3(20,0,rng_offset)
+			return Vector3(20,height,rng_offset)
 		3:
 			#top spawn
-			return Vector3(rng_offset,0,-20)
+			return Vector3(rng_offset,height,-20)
 		4:
 			#bottom spawn
-			return Vector3(rng_offset,0,20)
+			return Vector3(rng_offset,height,20)
+
+func end_game():
+	timer.stop()
+	state = State.END
+	end.visible = true
+	score_display.text = str(0)
+	player.visible = false
+
 
 func _on_spawn_timer_timeout():
 	spawn_enemy()
+
+func _on_player_health_changed(health) -> void:
+	health_display.text = str(health)
+	if health <= 0:
+		end_game()

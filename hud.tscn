@@ -40,3 +40,29 @@ offset_right = 296.0
 offset_bottom = 72.0
 theme = SubResource("Theme_phciu")
 text = "Press Enter to start"
+
+[node name="EndPanel" type="Panel" parent="."]
+visible = false
+offset_left = 404.0
+offset_top = 68.0
+offset_right = 715.0
+offset_bottom = 167.0
+
+[node name="EndLabel" type="Label" parent="EndPanel"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 5.0
+offset_right = 292.0
+offset_bottom = 95.0
+theme = SubResource("Theme_phciu")
+text = "CAN'T SURVIVE
+Score : "
+
+[node name="Score" type="Label" parent="EndPanel"]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 53.0
+offset_right = 175.0
+offset_bottom = 98.0
+theme_override_font_sizes/font_size = 30
+text = "0"

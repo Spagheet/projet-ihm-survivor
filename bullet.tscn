@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ve3oms21au2s"]
+[gd_scene load_steps=6 format=3 uid="uid://d2iw68kndxtxs"]
 
+[ext_resource type="Script" path="res://bullet.gd" id="1_8feyo"]
 [ext_resource type="Texture2D" uid="uid://bnikruhsapagn" path="res://textures/bullet.png" id="1_tgfuf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wctye"]
@@ -11,13 +12,21 @@ albedo_texture = ExtResource("1_tgfuf")
 
 [node name="bullet" type="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 0.044125, -0.999026, 0, 0.999026, 0.044125, 0, 0, 0)
+collision_layer = 4
+collision_mask = 2
+mass = 0.01
+max_contacts_reported = 10
+contact_monitor = true
+script = ExtResource("1_8feyo")
 
 [node name="bullet_texture" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_wctye")
 mesh = SubResource("CapsuleMesh_05p2m")
 skeleton = NodePath("../..")
 
 [node name="bullet_hitbox" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 9.31323e-10, 0, -9.31323e-10, 0.1, 0, 0, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 4.65662e-09, 0, -4.65662e-09, 0.5, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_6u0vc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
